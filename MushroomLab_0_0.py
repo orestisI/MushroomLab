@@ -586,11 +586,7 @@ def MainLoop():
 
     root.update_idletasks()
     root.update()
-    timer = threading.Timer(1,MainLoop)
-    timer.start()
 
-timer = threading.Timer(1,MainLoop)
-timer.start()
-
-root.mainloop()
-
+while True:
+    MainLoop()
+    time.sleep(0.01)
